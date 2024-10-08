@@ -7,6 +7,7 @@ class ChairsController < ApplicationController
   end
 
   def show
+    @chair = Chair.first[params:id]
   end
 
   def new
