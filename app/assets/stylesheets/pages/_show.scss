@@ -1,0 +1,58 @@
+/* Chair Container */
+.chair-container {
+  border: solid 1px #201E43;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  margin-top: 15px;
+  padding: 15px;
+  box-shadow: 2px 2px 3px #001e3d;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  border: solid 1px #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+/* Image Styling */
+.card img {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Chair Name and Price */
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #201E43;
+}
+
+/* Button Styling */
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #201E43;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #2d2a65;
+}
