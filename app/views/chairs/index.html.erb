@@ -1,1 +1,6 @@
-<h1>All chairs</h1>
+<h1>All Chairs</h1>
+<% @chairs.each do |chair| %>
+  <p>Name: <%= chair.name %></p>
+  <p>Price: £<%= chair.price %></p>
+  <hr>
+<% end %>
