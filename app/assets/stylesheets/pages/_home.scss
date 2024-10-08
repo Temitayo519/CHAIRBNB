@@ -25,16 +25,27 @@
   text-align: center;
 }
 
-a {
-  // color: white;
-  font-size: 30px;
-}
+.home-link {
+  text-align: center;
+  margin-top: 20px;
+  
+  
+  a {
+    display: inline-block;
+    background-color: rgba(124, 133, 137, 0.7); 
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    padding: 4px 8px;
 
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-// }
+    &:hover {
+      color: rgba(124, 133, 137, 0.7);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
