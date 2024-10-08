@@ -2,5 +2,6 @@
 <% @chairs.each do |chair| %>
   <p>Name: <%= chair.name %></p>
   <p>Price: £<%= chair.price %></p>
+  <%= link_to "View Chair", chair_path(chair) %>
   <hr>
 <% end %>
