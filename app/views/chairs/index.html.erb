@@ -6,7 +6,16 @@
         <% @chairs.each do |chair| %>
           <%#= cl_image_tag("ec02bekuardub6kt7ifl", width: 50, height: 50) %>
           <div class="chair-card">
-            <img src="<%= chair.image_url %>" alt="<%= chair.name %>">
+            <%# <img src="<%= chair.image_url %><%#" alt="<%= chair.name %><%#"> %>
+            <% if chair.photos.attached? %>
+              <%#= cl_image_tag(chair.photo.key, alt: chair.name, class: 'chair-image') %>
+              <% chair.photos.each do |photo| %>
+                <%= cl_image_tag(photo.key, alt: chair.name, class: 'chair-image') %>
+              <% end %>
+            <% else %>
+              <img src="<%= chair.image_url %>" alt="<%= chair.name %>" class="chair-image">
+            <% end %>
+
             <div class="chair-details">
               <p> <%= chair.name %> </p>
               <p> £<%= chair.price %> per day </p>
