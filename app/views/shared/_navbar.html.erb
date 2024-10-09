@@ -24,7 +24,6 @@
             <%= image_tag "user_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "List a new chair", new_chair_path, class: "dropdown-item" %>
-              <%#= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
