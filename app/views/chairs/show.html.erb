@@ -11,6 +11,8 @@
       <img src="<%= @chair.image_url %>" alt="<%= @chair.name %>" width="300px">
     <% end %>
 
+
+    <p>Sold by <%= @chair.user.username %> </p>
     <h3>Name: <%= @chair.name  %></h3>
     <h3>Price: £<%= @chair.price %></h3>
 
