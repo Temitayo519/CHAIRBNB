@@ -20,6 +20,15 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 16px;
 
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: grey;
+    }
+  }
+
   img {
     width: 250px;
     height: 250px;
@@ -30,17 +39,9 @@
 
   .chair-details {
     text-align: center;
-
-    a {
-      color: darkgrey;
-      text-decoration: none;
-
-      &:hover {
-        color: grey;
-      }
-    }
   }
 }
+
 
 @media (max-width: 768px) {
   .cards {
