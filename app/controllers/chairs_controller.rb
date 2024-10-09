@@ -14,11 +14,13 @@ class ChairsController < ApplicationController
   end
 
   def create
-    @chair = Chair.new(chair_params)
+    # @chair = Chair.new(chair_params)
+    @chair = current_user.chairs.new(chair_params)
     if @chair.save
-      redirect_to chair_path(@chair)
+      redirect_to chair_path(@chair), notice: 'Chair was successfully created.'
     else
-      render :new, status: :processable_entity
+      Rails.logger.debug @chair.errors.full_messages
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,6 +31,6 @@ class ChairsController < ApplicationController
   end
 
   def chair_params
-    params.require(:chair).permit(:name, :price)
+    params.require(:chair).permit(:name, :price, photos: [])
   end
 end

@@ -6,7 +6,7 @@
         <%= simple_form_for (@chair) do |f| %>
           <%= f.input :name %>
           <%= f.input :price %>
-          <%# <%= f.input :photo, as: :file %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.submit "Create New Chair"%>
         <% end %>
       </div>

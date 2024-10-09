@@ -1,7 +1,16 @@
 
 <div class="chair-container">
   <div class="card">
-    <img src="<%= @chair.image_url %>" alt="<%= @chair.name %>"  width="300px">
+    <%# <img src="<%= @chair.image_url %><%#" alt="<%= @chair.name %><%#"  width="300px"> %>
+
+    <% if @chair.photos.attached? %>
+      <% @chair.photos.each do |photo| %>
+        <%= cl_image_tag(photo.key, alt: @chair.name, class: 'chair-image', width: '300px') %>
+      <% end %>
+    <% else %>
+      <img src="<%= @chair.image_url %>" alt="<%= @chair.name %>" width="300px">
+    <% end %>
+
     <h3>Name: <%= @chair.name  %></h3>
     <h3>Price: £<%= @chair.price %></h3>
 
