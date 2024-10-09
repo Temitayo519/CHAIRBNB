@@ -4,5 +4,4 @@ class Chair < ApplicationRecord
 
   validates :name, presence: true
   validates :price, presence: true
-  validates :photos, presence: true
 end
