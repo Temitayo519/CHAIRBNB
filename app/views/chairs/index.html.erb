@@ -8,9 +8,14 @@
           <div class="chair-card">
             <img src="<%= chair.image_url %>" alt="<%= chair.name %>">
             <div class="chair-details">
-              <p> <%= link_to chair.name, chair_path(chair) %> </p>
+              <p> <%= chair.name %> </p>
               <p> £<%= chair.price %> per day </p>
             </div>
+
+            <div>
+              <%= link_to 'View chair', chair_path(chair), class: 'btn btn-danger' %>
+            </div>
+
           </div>
         <% end %>
       </div>
