@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   # before_action :set_booking, only: %i[show edit update destroy]
   before_action :set_booking, only: %i[show]
+  before_action :set_chair, only: %i[new create]
 
   def index
     @bookings = Booking.all
@@ -8,14 +9,16 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @chair = Chair.find(params[:chair_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.chair = @chair
 
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created.'
+      redirect_to bookings_path, notice: 'Booking was successfully created.'
     else
       render :new
     end
@@ -41,6 +44,10 @@ class BookingsController < ApplicationController
   # end
 
   private
+
+  def set_chair
+    @chair = Chair.find(params[:chair_id])
+  end
 
   def set_booking
     @booking = Booking.find(params[:id])
