@@ -3,12 +3,13 @@
   background-size: cover;
   background-position: center;
   padding: 220px 0;
+  height: 100vh;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-size: 50px;
   font-stretch: extra-expanded;
   font-weight: bold;
@@ -20,7 +21,7 @@
   font-size: 20px;
   color: white;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   position: relative;
   text-align: center;
 }
@@ -28,11 +29,11 @@
 .home-link {
   text-align: center;
   margin-top: 20px;
-  
-  
+
+
   a {
     display: inline-block;
-    background-color: rgba(124, 133, 137, 0.7); 
+    background-color: rgba(124, 133, 137, 0.7);
     color: white;
     text-decoration: none;
     font-size: 30px;
