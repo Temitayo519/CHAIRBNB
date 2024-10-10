@@ -1,0 +1,21 @@
+.col-6 {
+  overflow: hidden;
+  height: 800px;
+  width: 300px;
+  background: #7c8792;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: flexbox;
+  padding: 20px;
+  color: white;
+}
+
+.cards-my-booking {
+  padding: 16px;
+  height: 100px;
+}
+
+img, h3, h4 {
+  margin: 10px;
+}
