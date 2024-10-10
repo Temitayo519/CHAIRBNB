@@ -11,7 +11,8 @@
 .card {
   padding: 20px;
   width: 100%;
-  background-color: white;
+  background-color: #434b58;
+  color: #b7babb;;
   text-align: center;
 }
 
@@ -28,7 +29,7 @@
 .card h3 {
   margin: 10px 0;
   font-size: 1.5rem;
-  color: darkgrey;
+  color: #b7babb;;
 }
 
 .card a {
@@ -37,7 +38,7 @@
   padding: 10px 20px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #b7babb;
   background-color: red;
   box-shadow: 1px 1px darkgrey;
   font-weight: 500;
@@ -47,11 +48,13 @@
 }
 
 .card a:hover {
-  color: grey;
+  color: #7c8792;
+  background-color: darkgrey;
+  box-shadow: 2px 2px red;
 }
 
 #back-button {
-  color: #A9A9A9;
+  color: #b7babb;
   text-decoration: none;
   font-size: 1rem;
   margin-top: 10px;
@@ -63,6 +66,6 @@
 }
 
 #back-button:hover {
-  color: darkgrey;
+  color: #7c8792; 
   background-color: transparent;
 }
