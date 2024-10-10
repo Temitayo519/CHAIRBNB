@@ -1,20 +1,14 @@
-
 .chair-container {
-  border: solid 1px #201E43;
   border-radius: 10px;
   width: 50%;
   margin: auto;
-  margin-top: 15px;
-  box-shadow: 1px 1px 9px #001e3d;
+  margin-top: 20px;
   background-color: #efefef;
   display: flex;
   justify-content: center;
 }
 
 .card {
-  border: solid 1px #ddd;
-  border-radius: 10px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 100%;
   background-color: white;
@@ -45,15 +39,15 @@
   transition: background-color 0.3s ease;
   color: white;
   background-color: red;
-  border-radius: 30px;
   box-shadow: 1px 1px darkgrey;
   font-weight: 500;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card a:hover {
-  color: black;
-  background-color: darkgrey;
-  box-shadow: 2px 2px red;
+  color: grey;
 }
 
 #back-button {
@@ -69,6 +63,6 @@
 }
 
 #back-button:hover {
-  color: darkgrey; 
+  color: darkgrey;
   background-color: transparent;
 }
