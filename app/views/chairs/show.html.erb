@@ -16,7 +16,7 @@
     <h3>Name: <%= @chair.name  %></h3>
     <h3>Price: £<%= @chair.price %></h3>
 
-    <%= link_to "Book Now", chair_path(@chair) %>
+    <%= link_to "Book Now", new_booking_path %>
 
     <%= link_to "Back to all chairs", chairs_path, id: "back-button" %>
   </div>
