@@ -1,12 +1,11 @@
 <div class="container">
 
-  <div class="row" style="padding-left: 16px; padding-top: 16px;">
+  <div class="row justify-content-between" style="padding-left: 16px; padding-top: 16px;">
 
-    <div class="col-6 py-2 mt-2" style="display: flex; flex-direction: column;">
+    <div class="categ col-6 py-2 mt-2" style="display: flex; flex-direction: column;">
       <h3>My Bookings</h3>
 
       <div class="cards-my-bookings py-2 mt-2" style="display: flex; flex-direction: column;">
-
         <% current_user.bookings.each do |booking| %>
           <div class="cards-my-bookings-infos" style="display:flex" >
             <% if booking.chair.photos.attached? %>
@@ -22,10 +21,9 @@
         <% end %>
 
       </div>
-
     </div>
 
-    <div class="col-6 py-2 mt-2" style="display: flex; flex-direction: column;">
+    <div class="categ col-6 py-2 mt-2" style="display: flex; flex-direction: column;">
       <h3>My Chairs</h3>
 
       <div class="cards-my-chairs py-2 mt-2" style="display: flex; flex-direction: column;">
