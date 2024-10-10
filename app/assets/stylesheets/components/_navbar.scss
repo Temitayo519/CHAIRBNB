@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #434b58;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,13 +13,18 @@
 }
 
 .navbar {
-  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 8px;
 
   a {
     text-decoration: none;
-    color: black;
+    color: #b7babb;
     font-size: larger;
     margin-right: 30px;
+
+    &:hover {
+    color: #7c8792;
+    }
   }
 
   img {
@@ -27,5 +33,11 @@
 
   #navbarDropdown {
     width: 50px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+
+    &:hover{
+      filter: brightness(80%);
+    }
   }
 }
