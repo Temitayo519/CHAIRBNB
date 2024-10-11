@@ -24,7 +24,9 @@
 
 .image-info-link {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  // margin-top: auto;
+  padding-top: 20px;
 
   p {
     margin: 0;
@@ -36,6 +38,11 @@
   width: 300px;
   height: 300px;
   display: block;
+}
+
+.back-btn-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .card-content {
