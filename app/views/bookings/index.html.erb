@@ -1,44 +1,42 @@
 <div class="container">
 
-  <div class="row justify-content-center" style="padding-left: 16px; padding-top: 16px;">
+  <div class="row justify-content-between" style="padding-left: 16px; padding-top: 16px;">
 
-    <div class="col-6" style="display: flex; flex-direction: column;">
+    <div class="categ col-6 py-2 mt-2" style="display: flex; flex-direction: column;">
       <h3>My Bookings</h3>
 
-      <div class="cards-my-bookings py-2" style="display: flex; flex-direction: column;">
-
-        <% current_user.bookings.each do |booking| %> 
+      <div class="cards-my-bookings py-2 mt-2" style="display: flex; flex-direction: column;">
+        <% current_user.bookings.each do |booking| %>
           <div class="cards-my-bookings-infos" style="display:flex" >
             <% if booking.chair.photos.attached? %>
-              <%= cl_image_tag(booking.chair.photos.first.key, alt: booking.chair.name, class: 'chair-image', style: 'max-width: 20%;') %>
+              <%= cl_image_tag(booking.chair.photos.first.key, alt: booking.chair.name, class: 'chair-image', style: 'max-width: 100px;') %>
             <% else %>
-              <img style="max-width: 20%;" src="<%= booking.chair.image_url %>" alt="<%= booking.chair.name %>" />
+              <img style="max-width: 100px;" src="<%= booking.chair.image_url %>" alt="<%= booking.chair.name %>" />
             <% end %>
             <div class="card-details">
               <h4><%= booking.chair.name %></h4>
-              <p><%= booking.start_date %> - <%= booking.end_date %> </p> 
+              <p><%= booking.start_date %> - <%= booking.end_date %> </p>
             </div>
           </div>
         <% end %>
 
       </div>
-
     </div>
 
-    <div class="col-6" style="display: flex; flex-direction: column;">
+    <div class="categ col-6 py-2 mt-2" style="display: flex; flex-direction: column;">
       <h3>My Chairs</h3>
 
-      <div class="cards-my-chairs py-2"  style="display: flex; flex-direction: column;">
+      <div class="cards-my-chairs py-2 mt-2" style="display: flex; flex-direction: column;">
         <% current_user.chairs.each do |chair| %>
           <div class="cards-my-chairs-infos" style="display:flex">
             <% if chair.photos.attached? %>
-              <%= cl_image_tag(chair.photos.first.key, alt: chair.name, class: 'chair-image', style: 'max-width: 20%;') %>
+              <%= cl_image_tag(chair.photos.first.key, alt: chair.name, class: 'chair-image', style: 'max-width: 100px;') %>
             <% else %>
-              <img style="max-width: 20%;" src="<%= chair.image_url %>" alt="<%= chair.name %>" />
+              <img style="max-width: 100px;" src="<%= chair.image_url %>" alt="<%= chair.name %>" />
             <% end %>
             <div class="card-details">
               <h4> <%= chair.name %> </h4>
-              <p> £<%= chair.price %> </p> 
+              <p> £<%= chair.price %> </p>
             </div>
           </div>
         <% end %>

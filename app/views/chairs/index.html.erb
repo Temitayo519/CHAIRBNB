@@ -4,11 +4,8 @@
       <h1 style="padding-left: 16px; padding-top: 16px;">All Chairs</h1>
       <div class="cards">
         <% @chairs.each do |chair| %>
-          <%#= cl_image_tag("ec02bekuardub6kt7ifl", width: 50, height: 50) %>
           <div class="chair-card">
-            <%# <img src="<%= chair.image_url %><%#" alt="<%= chair.name %><%#"> %>
             <% if chair.photos.attached? %>
-              <%#= cl_image_tag(chair.photo.key, alt: chair.name, class: 'chair-image') %>
               <% chair.photos.each do |photo| %>
                 <%= cl_image_tag(photo.key, alt: chair.name, class: 'chair-image') %>
               <% end %>
@@ -16,15 +13,16 @@
               <img src="<%= chair.image_url %>" alt="<%= chair.name %>" class="chair-image">
             <% end %>
 
-            <div class="chair-details">
-              <p> <%= chair.name %> </p>
-              <p> £<%= chair.price %> per day </p>
-            </div>
+            <div class="chair-info">
+              <div class="chair-details">
+                <h5> <%= chair.name %> </h5>
+                <p> £<%= chair.price %> per day </p>
+              </div>
 
-            <div>
-              <%= link_to 'View chair', chair_path(chair), class: 'btn btn-danger' %>
+              <div class="view-button">
+                <%= link_to 'View chair', chair_path(chair) %>
+              </div>
             </div>
-
           </div>
         <% end %>
       </div>

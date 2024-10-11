@@ -2,6 +2,8 @@
 @import "home";
 @import "show";
 @import "links";
+@import "booking";
+
 
 .cards {
   display: grid;
@@ -16,8 +18,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #b7babb;
-  background-color: #434b58;
+  color: white;
+  background-color: #747c84;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 16px;
@@ -39,8 +41,43 @@
     margin-bottom: 10px;
   }
 
+  .chair-info {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
   .chair-details {
-    text-align: center;
+    text-align: start;
+
+    h5 {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.view-button {
+  flex-shrink: 0;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+  
+  a {
+    padding: 6px 12px;
+    color: white;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: #FF0000;
+
+    &:hover {
+      color: white;
+      border-color: transparent;
+      background-color: #FD5C5A;
+    }
   }
 }
 

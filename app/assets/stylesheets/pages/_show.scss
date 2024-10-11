@@ -1,70 +1,101 @@
+
 .chair-container {
+  width: 60%; 
+  margin: 60px auto;
+  background-color: #a8a8a8;
   border-radius: 10px;
-  width: 50%;
-  margin: auto;
-  margin-top: 20px;
-  background-color: #efefef;
+}
+
+.card-show {
   display: flex;
-  justify-content: center;
-}
-
-.card {
-  padding: 20px;
-  width: 100%;
-  background-color: #434b58;
-  color: #b7babb;
-  ;
-  text-align: center;
-}
-
-.card img {
+  flex-wrap: nowrap;
+  // align-items: flex-start;
+  border-color: #747c84;
   border-radius: 8px;
-  margin-bottom: 15px;
-  height: auto;
+  padding: 20px;
+  color: white;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-info-link {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+  }
+}
+
+.card-image img {
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.card-content {
+  flex-grow: 1;
   width: 50%;
+  display: flex;
+  margin: 16px
 }
 
-.card h3 {
-  margin: 10px 0;
-  font-size: 1.5rem;
-  color: #b7babb;
-  ;
+.card-details {
+  display: flex;
+  flex-direction: column;
 }
 
-.card a {
+.card-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-now-btn {
   display: inline-block;
-  text-decoration: none;
   padding: 10px 20px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  color: #b7babb;
-  background-color: red;
-  font-weight: 500;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card a:hover {
-  color: #7c8792;
-}
-
-#back-button {
-  color: #b7babb;
   text-decoration: none;
-  font-size: 1rem;
-  margin-top: 10px;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  display: inline;
-  padding: 0;
+  color: white;
+  background-color: #FF0000;
+  border-radius: 8px;
+  margin-right: 10px;
+  width: 150px;
+  text-align: center;
+  
+  white-space: nowrap;
 }
 
-#back-button:hover {
-  color: #7c8792;
+
+.back-btn {
+  display: inline-block;
+  // padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #FF0000;
+  border-radius: 8px;
+  margin-right: 10px;
+  width: auto;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.book-now-btn:hover, .back-btn:hover {
+  background-color: #FD5C5A;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding-left: 0;
+}
+
+.back-btn:hover {
+  color: #FF5D59;
   background-color: transparent;
 }
