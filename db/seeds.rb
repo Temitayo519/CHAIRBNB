@@ -7,6 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Booking.destroy_all
+puts "Booking table destroyed"
 Chair.destroy_all
 puts "Chair table destroyed"
 User.destroy_all
