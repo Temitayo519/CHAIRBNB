@@ -10,6 +10,36 @@
   // flex-direction: flexbox;
   padding: 20px;
   border-radius: 8px;
+
+  h3 {
+    // color: rgb(161, 177, 177);
+    padding-left: 30%;
+  }
+  
+  h4 {
+    color: #A8A8A8;
+  }
+  
+  
+  h3, h4 {
+    margin: 10px;
+    font-weight: bolder;
+    // color: rgb(177, 197, 211);
+  }
+  
+  p {
+    font-weight: bold;
+    margin: 10px;
+    color: rgb(158, 160, 163);
+  }
+  
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }  
 }
 
 .cards-my-booking, .cards-my-chairs {
@@ -25,32 +55,3 @@
   background-color: #434b58;
 }
 
-h3 {
-  // color: rgb(161, 177, 177);
-  padding-left: 30%;
-}
-
-h4 {
-  color: #A8A8A8;
-}
-
-
-h3, h4 {
-  margin: 10px;
-  font-weight: bolder;
-  // color: rgb(177, 197, 211);
-}
-
-p {
-  font-weight: bold;
-  margin: 10px;
-  color: rgb(158, 160, 163);
-}
-
-img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}

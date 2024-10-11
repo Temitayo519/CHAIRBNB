@@ -11,22 +11,21 @@
       <% else %>
         <img src="<%= @chair.image_url %>" alt="<%= @chair.name %>">
       <% end %>
-
+      <div class="image-info-link">
       <p>Sold by <%= @chair.user.username %></p>
+      <%= link_to "Back to all chairs", chairs_path, class: "back-btn" %>
+      </div>
     </div>
     
     <div class="card-content">
     <div class="card-show-details">
       <h5><%= @chair.name %></h5>
-      <p>£<%= @chair.price %></p>
-      <%= link_to "Back to all chairs", chairs_path, class: "back-btn" %>
-    </div>
-      <div class="card-actions">
-        <h5> Description: </h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Praesent pharetra tristique lacus, ut porttitor orci euismod a. 
-          Praesent placerat nisi ut leo mollis auctor.</p>
-          <%= link_to "Book Now", new_chair_booking_path(@chair), class: "book-now-btn" %>
+      <p>£<%= @chair.price %> per day</p>
+      <h5> Description: </h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Praesent pharetra tristique lacus, ut porttitor orci euismod a. 
+        Praesent placerat nisi ut leo mollis auctor.</p>
+        <%= link_to "Book Now", new_chair_booking_path(@chair), class: "book-now-btn" %>
       </div>
 
     </div>

@@ -1,6 +1,6 @@
 
 .chair-container {
-  width: 80%; 
+  width: 60%; 
   margin: 60px auto;
   background-color: #a8a8a8;
   border-radius: 10px;
@@ -10,9 +10,7 @@
   display: flex;
   flex-wrap: nowrap;
   // align-items: flex-start;
-  background-color: #747c84;
   border-color: #747c84;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 8px;
   padding: 20px;
   color: white;
@@ -23,13 +21,16 @@
 .card-image {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.card-imgage p {
-  align-items: end;
-}
+.image-info-link {
+  display: flex;
+  justify-content: space-between;
 
+  p {
+    margin: 0;
+  }
+}
 
 .card-image img {
   border-radius: 8px;
@@ -72,7 +73,7 @@
 
 .back-btn {
   display: inline-block;
-  padding: 10px 20px;
+  // padding: 10px 20px;
   text-decoration: none;
   color: white;
   background-color: #FF0000;
