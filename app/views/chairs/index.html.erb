@@ -4,27 +4,30 @@
       <h1 style="padding-left: 16px; padding-top: 16px;">All Chairs</h1>
       <div class="cards">
         <% @chairs.each do |chair| %>
-          <div class="chair-card">
-            <% if chair.photos.attached? %>
-              <% chair.photos.each do |photo| %>
-                <%= cl_image_tag(photo.key, alt: chair.name, class: 'chair-image') %>
+          <%= link_to chair_path(chair) do %>
+            <div class="chair-card">
+              <% if chair.photos.attached? %>
+                <% chair.photos.each do |photo| %>
+                  <%= cl_image_tag(photo.key, alt: chair.name, class: 'chair-image') %>
+                <% end %>
+              <% else %>
+                <img src="<%= chair.image_url %>" alt="<%= chair.name %>" class="chair-image">
               <% end %>
-            <% else %>
-              <img src="<%= chair.image_url %>" alt="<%= chair.name %>" class="chair-image">
-            <% end %>
 
-            <div class="chair-info">
-              <div class="chair-details">
-                <h5> <%= chair.name %> </h5>
-                <p> £<%= chair.price %> per day </p>
-              </div>
+              <div class="chair-info">
+                <div class="chair-details">
+                  <h5> <%= chair.name %> </h5>
+                  <p> £<%= chair.price %> per day </p>
+                </div>
 
-              <div class="view-button">
-                <%= link_to 'View chair', chair_path(chair) %>
+                <%# <div class="view-button"> %>
+                  <%#= link_to 'View chair', chair_path(chair) %>
+                <%# </div> %>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
+
       </div>
     </div>
   </div>

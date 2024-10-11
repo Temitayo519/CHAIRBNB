@@ -1,13 +1,15 @@
 <div class="container mt-4 d-flex justify-content-center align-items-center">
   <div class="row w-100">
     <div class="col-md-6 offset-md-3">
-      <h1 class="text-center" style="padding-left: 16px; padding-top: 16px;">List new chair</h1>
+      <h1 class="text-center" style="padding-left: 16px; padding-top: 16px;">Rent out your chair</h1>
       <div>
         <%= simple_form_for (@chair) do |f| %>
           <%= f.input :name %>
           <%= f.input :price %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= f.submit "Create New Chair"%>
+          <div class="form-group" style="justify-content: center; display: flex">
+          <%= f.submit "Add chair", class:"book-now-btn" %>
+          </div>
         <% end %>
       </div>
     </div>
