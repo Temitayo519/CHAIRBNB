@@ -5,6 +5,7 @@
       <h2 class="text-center" style="padding-left: 16px; padding-top: 16px;"><%= @chair.name %> - £<%= @chair.price %>/day </h2>
     </div>
   </div>
+
   <div class="col-md-6 offset-md-3">
     <%= simple_form_for [@chair, @booking] do |f| %>
       <div class="form-row" style="display: flex;">
