@@ -17,7 +17,7 @@ class ChairsController < ApplicationController
     # @chair = Chair.new(chair_params)
     @chair = current_user.chairs.new(chair_params)
     if @chair.save
-      redirect_to chair_path(@chair), notice: 'Chair was successfully created.'
+      redirect_to bookings_path, notice: 'Chair was successfully created.'
     else
       Rails.logger.debug @chair.errors.full_messages
       render :new, status: :unprocessable_entity
