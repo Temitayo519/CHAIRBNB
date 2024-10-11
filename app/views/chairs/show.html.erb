@@ -1,23 +1,35 @@
 
 <div class="chair-container">
-  <div class="card">
-    <%# <img src="<%= @chair.image_url %><%#" alt="<%= @chair.name %><%#"  width="300px"> %>
+  <div class="card-show">
 
-    <% if @chair.photos.attached? %>
-      <% @chair.photos.each do |photo| %>
-        <%= cl_image_tag(photo.key, alt: @chair.name, class: 'chair-image', width: '300px') %>
+    <div class="card-image">
+
+      <% if @chair.photos.attached? %>
+        <% @chair.photos.each do |photo| %>
+          <%= cl_image_tag(photo.key, alt: @chair.name) %>
+        <% end %>
+      <% else %>
+        <img src="<%= @chair.image_url %>" alt="<%= @chair.name %>">
       <% end %>
-    <% else %>
-      <img src="<%= @chair.image_url %>" alt="<%= @chair.name %>" width="300px">
-    <% end %>
 
+      <p>Sold by <%= @chair.user.username %></p>
+    </div>
+    
+    <div class="card-content">
+    <div class="card-show-details">
+      <h5><%= @chair.name %></h5>
+      <p>£<%= @chair.price %></p>
+      <%= link_to "Back to all chairs", chairs_path, class: "back-btn" %>
+    </div>
+      <div class="card-actions">
+        <h5> Description: </h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Praesent pharetra tristique lacus, ut porttitor orci euismod a. 
+          Praesent placerat nisi ut leo mollis auctor.</p>
+          <%= link_to "Book Now", new_chair_booking_path(@chair), class: "book-now-btn" %>
+      </div>
 
-    <p>Sold by <%= @chair.user.username %> </p>
-    <h3>Name: <%= @chair.name  %></h3>
-    <h3>Price: £<%= @chair.price %></h3>
+    </div>
 
-    <%= link_to "Book Now", new_chair_booking_path(@chair) %>
-
-    <%= link_to "Back to all chairs", chairs_path, id: "back-button" %>
   </div>
 </div>
