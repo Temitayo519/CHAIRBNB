@@ -1,19 +1,29 @@
-<div class="container">
+<div class="container" style="margin-top: 10px;">
   <div class="row">
     <div class="col">
-      <h1>New booking for <%= @chair.name %> - £<%= @chair.price %> per/day </h1>
+      <h1 class="text-center" style="padding-left: 16px; padding-top: 16px;">New booking</h1>
+      <h2 class="text-center" style="padding-left: 16px; padding-top: 16px;"><%= @chair.name %> - £<%= @chair.price %>/day </h2>
     </div>
   </div>
-  <div>
+
+  <div class="col-md-6 offset-md-3">
     <%= simple_form_for [@chair, @booking] do |f| %>
-      <%= f.input :start_date, html5:true %>
-      <%= f.input :end_date, html5:true %>
-      <hr>
-      <div>
-        <strong>Total Price: £<span id="total_price">0</span></strong>
+      <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+          <%= f.input :start_date, html5: true, label: 'Start Date' %>
+        </div>
+        <div class="form-group col-md-6">
+          <%= f.input :end_date, html5: true, label: 'End Date' %>
+        </div>
       </div>
-      <hr>
-      <%= f.submit "Book"%>
+      <div class="form-group" style="justify-content: center; display: flex">
+        <%= f.submit "Book" %>
+      </div>
     <% end %>
   </div>
 </div>
+
+<%# <hr>
+      <div>
+        <strong>Total Price: £<span id="total_price">0</span></strong>
+      </div> %>
